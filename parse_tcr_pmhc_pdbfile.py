@@ -36,6 +36,7 @@ for fname in args.pdbfiles:
     pose = tcrdock.pdblite.pose_from_pdb(fname)
     num_chains = len(pose['chains'])
     if args.mhc_class==1:
+        print('Num chains: ', num_chains)
         if num_chains == 5:
             # remove B2M
             print(f'removing chain 2 from a 5-chain MHC class I pose; residue numbers '
